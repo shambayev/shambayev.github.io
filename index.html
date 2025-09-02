@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой сайт-визитка</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (анимации при прокрутке) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-indigo-100 to-purple-200 text-gray-900">
+
+  <!-- Навигация -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold text-indigo-600">Моё имя</h1>
+      <!-- Десктопное меню -->
+      <ul class="hidden md:flex gap-6">
+        <li><a href="#home" class="hover:text-indigo-600">Главная</a></li>
+        <li><a href="#books" class="hover:text-indigo-600">Книги</a></li>
+        <li><a href="#translations" class="hover:text-indigo-600">Переводы</a></li>
+        <li><a href="#about" class="hover:text-indigo-600">Обо мне</a></li>
+        <li><a href="#contact" class="hover:text-indigo-600">Контакты</a></li>
+      </ul>
+      <!-- Мобильное меню (бургер) -->
+      <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+    </nav>
+    <!-- Выпадающее мобильное меню -->
+    <ul id="mobile-menu" class="hidden flex-col bg-white shadow-md md:hidden text-center">
+      <li><a href="#home" class="block py-2 hover:bg-indigo-100">Главная</a></li>
+      <li><a href="#books" class="block py-2 hover:bg-indigo-100">Книги</a></li>
+      <li><a href="#translations" class="block py-2 hover:bg-indigo-100">Переводы</a></li>
+      <li><a href="#about" class="block py-2 hover:bg-indigo-100">Обо мне</a></li>
+      <li><a href="#contact" class="block py-2 hover:bg-indigo-100">Контакты</a></li>
+    </ul>
+  </header>
+
+  <!-- Главная -->
+  <section id="home" class="text-center py-20 px-4" data-aos="fade-down">
+    <img src="me.jpg" alt="Моё фото" 
+         class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto shadow-lg mb-6" 
+         data-aos="zoom-in">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">Добро пожаловать!</h2>
+    <p class="text-base md:text-lg mb-6" data-aos="fade-up" data-aos-delay="200">
+      Я — [Ваше имя], автор, переводчик и исследователь.
+    </p>
+  </section>
+
+  <!-- Книги -->
+  <section id="books" class="max-w-6xl mx-auto py-16 px-4">
+    <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center" data-aos="fade-up">Мои книги</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-4 rounded-2xl shadow-lg" data-aos="flip-left">
+        <img src="book1.jpg" class="rounded-lg mb-4 w-full h-48 object-cover" alt="Книга 1">
+        <h3 class="text-xl font-semibold">Название книги</h3>
+        <p class="text-sm text-gray-600 mb-2">Краткое описание...</p>
+        <a href="#" class="text-indigo-600 hover:underline">Подробнее</a>
+      </div>
+      <div class="bg-white p-4 rounded-2xl shadow-lg" data-aos="flip-left" data-aos-delay="150">
+        <img src="book2.jpg" class="rounded-lg mb-4 w-full h-48 object-cover" alt="Книга 2">
+        <h3 class="text-xl font-semibold">Название книги</h3>
+        <p class="text-sm text-gray-600 mb-2">Краткое описание...</p>
+        <a href="#" class="text-indigo-600 hover:underline">Подробнее</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Переводы -->
+  <section id="translations" class="bg-indigo-50 py-16 px-4">
+    <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center" data-aos="fade-up">Мои переводы</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white p-4 rounded-2xl shadow-lg" data-aos="zoom-in">
+        <img src="translation1.jpg" class="rounded-lg mb-4 w-full h-48 object-cover" alt="Перевод 1">
+        <h3 class="text-xl font-semibold">Название перевода</h3>
+        <p class="text-sm text-gray-600 mb-2">Краткое описание...</p>
+        <a href="#" class="text-indigo-600 hover:underline">Подробнее</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Обо мне -->
+  <section id="about" class="max-w-3xl mx-auto py-16 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6" data-aos="fade-up">Обо мне</h2>
+    <p class="text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+      Краткая биография, достижения, интересы. Здесь можно рассказать о вашем пути в литературе, переводах и проектах.
+    </p>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contact" class="bg-indigo-100 py-16 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6" data-aos="fade-up">Контакты</h2>
+    <p class="mb-4" data-aos="fade-up" data-aos-delay="150">Свяжитесь со мной:</p>
+    <p class="text-lg" data-aos="fade-up" data-aos-delay="300">
+      📧 <a href="mailto:youremail@example.com" class="underline">youremail@example.com</a>
+    </p>
+  </section>
+
+  <!-- Футер -->
+  <footer class="bg-white text-center py-4 shadow-inner">
+    <p class="text-sm text-gray-600">&copy; 2025 Моё имя. Все права защищены.</p>
+  </footer>
+
+  <!-- Скрипты -->
+  <script>
+    // Открыть/закрыть мобильное меню
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800, // скорость (мс)
+      once: true     // анимация только один раз
+    });
+  </script>
+</body>
+</html>
